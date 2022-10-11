@@ -1,0 +1,60 @@
+meta(charset="UTF-8")
+meta(http-equiv="X-UA-Compatible", content="IE=edge")
+meta(name="viewport", content="width=device-width,initial-scale=1")
+title App Landing Page
+link(rel="stylesheet", href="/css/bootstrap.css")
+link(href="/css/main.css", rel="stylesheet")
+nav.navbar.navbar-expand-lg.bg-light.fixed-top
+  .container-fluid
+    a.navbar-brand(href="/index.html")
+      | U
+      span.text-warning Farm
+    button.navbar-toggler(type="button", data-bs-toggle="collapse", data-bs-target="#navbarSupportedContent", aria-controls="navbarSupportedContent", aria-expanded="false", aria-label="Toggle navigation")
+      span.navbar-toggler-icon
+    .collapse.navbar-collapse#navbarSupportedContent
+      ul.navbar-nav.ms-auto.mb-2.mb-lg-0
+        li.nav-item
+          a.nav-link.active(aria-current="page", href="#") Home
+        li.nav-item
+          a.nav-link(href="#") Products
+        li.nav-item.dropdown
+          a.nav-link.dropdown-toggle#navbarDropdown(href="#", role="button", data-bs-toggle="dropdown", aria-expanded="false").
+            
+            Account
+            
+          ul.dropdown-menu(aria-labelledby="navbarDropdown")
+            li
+              .a.dropdown-item(href="#") Account
+            li
+              a.dropdown-item(href="/views/login.html") Login
+            li
+              hr.dropdown-divider
+            li
+              a.dropdown-item(href="/views/farmeroneregistration.html") Sign Up
+//  <section>         
+section.form-section-padding
+  form
+    //  Email input 
+    .form-outline.mb-4.ms-auto
+      input#email.form-control(type="email")
+      label.form-label(for="email") Email address
+    //  Password input 
+    .form-outline.mb-4
+      input#password.form-control(type="password")
+      label.form-label(for="password") Password
+    //  2 column grid layout for inline styling 
+    .row.mb-4
+      .col.d-flex.justify-content-center
+        //  Checkbox 
+        .form-check
+          input.form-check-input#checkbox(type="checkbox", checked)
+          label.form-check-label(for="checkbox") Remember me
+      .col
+        //  Simple link 
+        a(href="#!") Forgot password?
+    //  Submit button 
+    button.btn.btn-primary.btn-block.mb-4(type="submit") Sign in
+    
+  
+   
+script(src="/js/bootstrap.bundle.js")

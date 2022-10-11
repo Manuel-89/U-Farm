@@ -1,0 +1,93 @@
+meta(charset="UTF-8")
+meta(http-equiv="X-UA-Compatible", content="IE=edge")
+meta(name="viewport", content="width=device-width,initial-scale=1")
+title Register
+link(rel="stylesheet", href="/css/bootstrap.css")
+link(href="/css/main.css", rel="stylesheet")
+//  Body Section 
+nav.navbar.navbar-expand-lg.bg-light.fixed-top
+  .container-fluid
+    a.navbar-brand(href="__/index.html")
+      | U
+      span.text-warning Farm
+    button.navbar-toggler(type="button", data-bs-toggle="collapse", data-bs-target="#navbarSupportedContent", aria-controls="navbarSupportedContent", aria-expanded="false", aria-label="Toggle navigation")
+      span.navbar-toggler-icon
+    .collapse.navbar-collapse#navbarSupportedContent
+      ul.navbar-nav.ms-auto.mb-2.mb-lg-0
+        li.nav-item
+          a.nav-link.active(aria-current="page", href="__/index.html") Home
+        li.nav-item
+          a.nav-link(href="#") Products
+        li.nav-item.dropdown
+          a.nav-link.dropdown-toggle#navbarDropdown(href="#", role="button", data-bs-toggle="dropdown", aria-expanded="false").
+            
+            Account
+            
+          ul.dropdown-menu(aria-labelledby="navbarDropdown")
+            // <li><a class="dropdown-item" href="#">Account</a></li>
+            li
+              a.dropdown-item(href="/views/login.html") Login
+            li
+              hr.dropdown-divider
+            li
+              a.dropdown-item(href="/views/farmeroneregistration.html") Sign Up
+.container
+  form.form-horizontal(role="form")
+    h2 Registration
+    .form-group
+      label.col-sm-3.control-label(for="firstName") First Name
+      .col-sm-9
+        input#firstName.form-control(type="text", placeholder="First Name", autofocus)
+    .form-group
+      label.col-sm-3.control-label(for="lastName") Last Name
+      .col-sm-9
+        input#lastName.form-control(type="text", placeholder="Last Name", autofocus)
+    .form-group
+      label.col-sm-3.control-label(for="email") Email*
+      .col-sm-9
+        input#email.form-control(type="email", placeholder="Email", name="email")
+    .form-group
+      label.col-sm-3.control-label(for="password") Password*
+      .col-sm-9
+        input#password.form-control(type="password", placeholder="Password")
+    .form-group
+      label.col-sm-3.control-label(for="password") Confirm Password*
+      .col-sm-9
+        input#password.form-control(type="password", placeholder="Password")
+    .form-group
+      label.col-sm-3.control-label(for="birthDate") Date of Birth*
+      .col-sm-9
+        input#birthDate.form-control(type="date")
+    .form-group
+      label.col-sm-3.control-label(for="phoneNumber") Phone number
+      .col-sm-9
+        input#phoneNumber.form-control(type="phoneNumber", placeholder="Phone number")
+        span.help-block Your phone number won't be disclosed anywhere 
+    .form-group
+      label.col-sm-3.control-label(for="NIN") National Id
+      .col-sm-9
+        input#nin.form-control(type="number", placeholder="Please write your National id number here")
+    .form-group
+      label.col-sm-3.control-label(for="ward") Ward*
+      .col-sm-9
+        input#ward.form-control(type="text", placeholder="Pleasewrite ward details here")
+    .form-group
+      label.control-label.col-sm-3 Gender
+      .col-sm-6
+        .row
+          .col-sm-4
+            label.radio-inline
+              input#femaleRadio(type="radio", value="Female")
+              | Female
+
+          .col-sm-4
+            label.radio-inline
+              input#maleRadio(type="radio", value="Male")
+              | Male
+
+    //  /.form-group 
+    .form-group
+      .col-sm-9.col-sm-offset-3
+        span.help-block *Required fields
+    button.btn.btn-primary.btn-block(type="submit") Register
+  script(src="/js/bootstrap.bundle.js")
